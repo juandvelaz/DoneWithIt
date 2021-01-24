@@ -4,7 +4,7 @@ import { Image, ImageBackground, StyleSheet, Text, View } from 'react-native';
 import colors from '../config/colors';
 
 function WelcomeScreen(props) {
-  //const background = { uri: 'https://picsum.photos/1242/2688' };
+  // const background = { uri: 'https://picsum.photos/1242/2688' };
   return (
     <ImageBackground
       style={styles.background}
