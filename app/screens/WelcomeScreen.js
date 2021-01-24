@@ -1,6 +1,8 @@
 import React from 'react';
 import { Image, ImageBackground, StyleSheet, Text, View } from 'react-native';
 
+import colors from '../config/colors';
+
 function WelcomeScreen(props) {
   //const background = { uri: 'https://picsum.photos/1242/2688' };
   return (
@@ -19,7 +21,7 @@ function WelcomeScreen(props) {
 }
 const styles = StyleSheet.create({
   background: { flex: 1, justifyContent: 'flex-end', alignItems: 'center' },
-  loginButton: { width: '100%', height: 70, backgroundColor: '#fc5c65' },
+  loginButton: { width: '100%', height: 70, backgroundColor: colors.primary },
   logo: {
     width: 100,
     height: 100,
@@ -29,7 +31,11 @@ const styles = StyleSheet.create({
     top: 70,
     alignItems: 'center',
   },
-  registerButton: { width: '100%', height: 70, backgroundColor: '#4ecdc4' },
+  registerButton: {
+    width: '100%',
+    height: 70,
+    backgroundColor: colors.secondary,
+  },
 });
 
 export default WelcomeScreen;
