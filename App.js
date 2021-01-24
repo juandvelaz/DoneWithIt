@@ -7,14 +7,16 @@ import {
   Text,
   View,
 } from 'react-native';
+import { useDeviceOrientation } from '@react-native-community/hooks';
 
 export default function App() {
   const image = { uri: 'https://picsum.photos/1242/2688' };
+  const { portrait } = useDeviceOrientation();
   return (
     <View style={styles.container}>
       <ImageBackground source={image} style={styles.image}>
         <SafeAreaView>
-          <Text style={styles.text}>Hello World!</Text>
+          {portrait ? <Text style={styles.text}>Hello World!</Text> : <></>}
         </SafeAreaView>
       </ImageBackground>
       <StatusBar style="auto" />
