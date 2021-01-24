@@ -9,11 +9,7 @@ export default function App() {
   // <WelcomeScreen />
   // <ViewImageScreen />;
   // <AppButton title="Login" />;
-  return (
-    <View style={styles.container}>
-      <AppButton title="Login" />
-    </View>
-  );
+  return <WelcomeScreen />;
 }
 
 const styles = StyleSheet.create({
