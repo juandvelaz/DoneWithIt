@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
   },
   detailsContainer: {
-    paddingTop: 20,
+    padding: 20,
   },
   image: {
     width: '100%',
