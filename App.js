@@ -1,16 +1,10 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet } from 'react-native';
 
-import ListingDetailsScreen from './app/screens/ListingDetailsScreen';
+import ViewImageScreen from './app/screens/ViewImageScreen';
 
 export default function App() {
-  return <ListingDetailsScreen></ListingDetailsScreen>;
+  return <ViewImageScreen></ViewImageScreen>;
 }
 
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: '#f8f4f4',
-    padding: 20,
-    paddingTop: 100,
-  },
-});
+const styles = StyleSheet.create({});
