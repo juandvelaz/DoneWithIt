@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FlatList, StyleSheet, View } from 'react-native';
 
 import AppListItem from '../components/AppListItem';
@@ -6,7 +6,7 @@ import AppListItemDeleteAction from '../components/AppListItemDeleteAction';
 import AppListItemSeperator from '../components/AppListItemSeperator';
 import AppScreen from '../components/AppScreen';
 
-const messages = [
+const initilaMessages = [
   {
     id: 1,
     title: 'T1',
@@ -28,6 +28,11 @@ const messages = [
 ];
 
 function MessagesScreen(props) {
+  const [messages, setMessages] = useState(initilaMessages);
+  const handleDelete = (message) => {
+    setMessages(messages.filter((m) => m.id !== message.id));
+  };
+
   return (
     <AppScreen>
       <FlatList
@@ -40,7 +45,11 @@ function MessagesScreen(props) {
               subTitle={item.description}
               image={item.image}
               onPress={() => console.log('Message selected', item)}
-              renderRightActions={AppListItemDeleteAction}
+              renderRightActions={() => {
+                return (
+                  <AppListItemDeleteAction onPress={() => handleDelete(item)} />
+                );
+              }}
             />
           );
         }}
