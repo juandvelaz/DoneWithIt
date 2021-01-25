@@ -1,18 +1,18 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
-
-import AppScreen from './app/components/AppScreen';
 import AppIcon from './app/components/AppIcon';
+
+import AppListItem from './app/components/AppListItem';
+import AppScreen from './app/components/AppScreen';
 
 export default function App() {
   return (
     <AppScreen>
-      <AppIcon
-        name="email"
-        size={50}
-        backgroundColor="red"
-        iconColor="white"
-      ></AppIcon>
+      <AppListItem
+        title="Title"
+        subTitle="SubTitle"
+        ImageComponent={<AppIcon name="email" />}
+      />
     </AppScreen>
   );
 }
