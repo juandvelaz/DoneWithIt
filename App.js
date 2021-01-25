@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { StyleSheet, Text, TextInput } from 'react-native';
+import React from 'react';
+import { StyleSheet } from 'react-native';
 
 // COMPONENTS
 import AppScreen from './app/components/AppScreen';
