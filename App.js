@@ -1,5 +1,9 @@
-import React from 'react';
-import { StyleSheet } from 'react-native';
+import React, { useState } from 'react';
+import { StyleSheet, Text, TextInput } from 'react-native';
+
+// COMPONENTS
+import AppScreen from './app/components/AppScreen';
+import AppTextInput from './app/components/AppTextInput';
 
 // SCREENS
 import AccountScreen from './app/screens/AccountScreen';
@@ -10,7 +14,11 @@ import ViewImageScreen from './app/screens/ViewImageScreen';
 import WelcomeScreen from './app/screens/WelcomeScreen';
 
 export default function App() {
-  return <WelcomeScreen />;
+  return (
+    <AppScreen>
+      <AppTextInput placeholder="Username" icon="email" />
+    </AppScreen>
+  );
 }
 
 const styles = StyleSheet.create({});

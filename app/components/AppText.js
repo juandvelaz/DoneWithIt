@@ -7,13 +7,12 @@ function AppText({ children, style }) {
 
 const styles = StyleSheet.create({
   text: {
+    fontSize: 18,
     ...Platform.select({
       ios: {
-        fontSize: 18,
         fontFamily: 'Avenir',
       },
       andriod: {
-        fontSize: 18,
         fontFamily: 'Roboto',
       },
     }),
