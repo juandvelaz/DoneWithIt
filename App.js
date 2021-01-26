@@ -14,11 +14,7 @@ import ViewImageScreen from './app/screens/ViewImageScreen';
 import WelcomeScreen from './app/screens/WelcomeScreen';
 
 export default function App() {
-  return (
-    <AppScreen>
-      <AppTextInput placeholder="Username" icon="email" />
-    </AppScreen>
-  );
+  return <MessagesScreen />;
 }
 
 const styles = StyleSheet.create({});
