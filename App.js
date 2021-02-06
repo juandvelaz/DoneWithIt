@@ -7,10 +7,12 @@ import ListingDetailsScreen from './app/screens/ListingDetailsScreen';
 import ListingsScreen from './app/screens/ListingsScreen';
 import MessagesScreen from './app/screens/MessagesScreen';
 import ViewImageScreen from './app/screens/ViewImageScreen';
+import LoginScreen from './app/screens/LoginScreen';
 import WelcomeScreen from './app/screens/WelcomeScreen';
 
 export default function App() {
-  return <WelcomeScreen />;
+  // return <WelcomeScreen />;
+  return <LoginScreen />;
   // return <ListingsScreen />;
   // return <ListingDetailsScreen />;
   // return <ViewImageScreen />;
