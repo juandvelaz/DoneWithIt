@@ -9,8 +9,12 @@ function CustomCard({ title, subTitle, image }) {
     <View style={styles.card}>
       <Image style={styles.image} source={image} />
       <View style={styles.detailsContainer}>
-        <CustomText style={styles.title}>{title}</CustomText>
-        <CustomText style={styles.subTitle}>{subTitle}</CustomText>
+        <CustomText style={styles.title} numberOfLines={1}>
+          {title}
+        </CustomText>
+        <CustomText style={styles.subTitle} numberOfLines={2}>
+          {subTitle}
+        </CustomText>
       </View>
     </View>
   );
