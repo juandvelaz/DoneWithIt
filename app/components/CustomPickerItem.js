@@ -3,10 +3,10 @@ import { TouchableOpacity, StyleSheet } from 'react-native';
 
 import CustomText from './CustomText';
 
-function CustomPickerItem({ label, onPress }) {
+function CustomPickerItem({ item, onPress }) {
   return (
     <TouchableOpacity onPress={onPress}>
-      <CustomText style={styles.text}>{label}</CustomText>
+      <CustomText style={styles.text}>{item.label}</CustomText>
     </TouchableOpacity>
   );
 }

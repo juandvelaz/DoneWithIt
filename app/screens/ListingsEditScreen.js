@@ -7,6 +7,7 @@ import CustomForm from '../components/CustomForm';
 import CustomFormField from '../components/CustomFormField';
 import CustomFormPicker from '../components/CustomFormPicker';
 import CustomSubmitButton from '../components/CustomSubmitButton';
+import CustomCategoryPickerItem from '../components/CustomCategoryPickerItem';
 
 const validationSchema = Yup.object().shape({
   title: Yup.string().required().min(1).label('Title'),
@@ -16,9 +17,9 @@ const validationSchema = Yup.object().shape({
 });
 
 const categories = [
-  { label: 'Furniture', value: 1 },
-  { label: 'Clothing', value: 2 },
-  { label: 'Camera', value: 3 },
+  { label: 'Furniture', value: 1, backgroundColor: 'red', icon: 'apps' },
+  { label: 'Clothing', value: 2, backgroundColor: 'green', icon: 'email' },
+  { label: 'Camera', value: 3, backgroundColor: 'blue', icon: 'lock' },
 ];
 
 function ListingEditScreen() {
@@ -44,6 +45,8 @@ function ListingEditScreen() {
         <CustomFormPicker
           items={categories}
           name="category"
+          numberOfColumns={3}
+          PickerItemComponent={CustomCategoryPickerItem}
           placeholder="Category"
         />
         <CustomFormField

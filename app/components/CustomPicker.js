@@ -4,7 +4,6 @@ import {
   FlatList,
   Modal,
   StyleSheet,
-  TextInput,
   TouchableWithoutFeedback,
   View,
 } from 'react-native';
@@ -19,6 +18,8 @@ function CustomPicker({
   icon,
   items,
   onSelectItem,
+  numberOfColumns = 1,
+  PickerItemComponent = CustomPickerItem,
   placeholder,
   selectedItem,
   width = '100%',
@@ -54,8 +55,10 @@ function CustomPicker({
           <FlatList
             data={items}
             keyExtractor={(item) => item.value.toString()}
+            numColumns={numberOfColumns}
             renderItem={({ item }) => (
-              <CustomPickerItem
+              <PickerItemComponent
+                item={item}
                 label={item.label}
                 onPress={() => {
                   setModalVisible(false);
