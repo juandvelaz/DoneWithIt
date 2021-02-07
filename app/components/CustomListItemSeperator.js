@@ -1,8 +1,9 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
+
 import colors from '../config/colors';
 
-function AppListItemSeperator() {
+function CustomListItemSeperator() {
   return <View style={styles.seperator} />;
 }
 
@@ -14,4 +15,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default AppListItemSeperator;
+export default CustomListItemSeperator;

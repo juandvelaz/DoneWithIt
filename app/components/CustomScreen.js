@@ -1,9 +1,8 @@
 import React from 'react';
+import Constants from 'expo-constants';
 import { StyleSheet, SafeAreaView, View } from 'react-native';
 
-import Constants from 'expo-constants';
-
-function AppScreen({ children, style }) {
+function CustomScreen({ children, style }) {
   return (
     <SafeAreaView style={[styles.screen, style]}>
       <View style={[styles.screen, style]}>{children}</View>
@@ -18,4 +17,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default AppScreen;
+export default CustomScreen;

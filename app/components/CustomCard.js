@@ -2,15 +2,15 @@ import React from 'react';
 import { Image, StyleSheet, View } from 'react-native';
 
 import colors from '../config/colors';
-import AppText from './AppText';
+import CustomText from './CustomText';
 
-function AppCard({ title, subTitle, image }) {
+function CustomCard({ title, subTitle, image }) {
   return (
     <View style={styles.card}>
       <Image style={styles.image} source={image} />
       <View style={styles.detailsContainer}>
-        <AppText style={styles.title}>{title}</AppText>
-        <AppText style={styles.subTitle}>{subTitle}</AppText>
+        <CustomText style={styles.title}>{title}</CustomText>
+        <CustomText style={styles.subTitle}>{subTitle}</CustomText>
       </View>
     </View>
   );
@@ -40,4 +40,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default AppCard;
+export default CustomCard;

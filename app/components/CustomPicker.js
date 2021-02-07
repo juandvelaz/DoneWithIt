@@ -11,11 +11,17 @@ import {
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import defaultStyles from '../config/styles';
-import AppText from './AppText';
-import AppScreen from './AppScreen';
-import AppPickerItem from './AppPickerItem';
+import CustomText from './CustomText';
+import CustomScreen from './CustomScreen';
+import CustomPickerItem from './CustomPickerItem';
 
-function AppPicker({ icon, items, onSelectItem, placeholder, selectedItem }) {
+function CustomPicker({
+  icon,
+  items,
+  onSelectItem,
+  placeholder,
+  selectedItem,
+}) {
   const [modalVisible, setModalVisible] = useState(false);
   return (
     <>
@@ -29,9 +35,9 @@ function AppPicker({ icon, items, onSelectItem, placeholder, selectedItem }) {
               style={styles.icon}
             />
           )}
-          <AppText style={styles.text}>
+          <CustomText style={styles.text}>
             {selectedItem ? selectedItem.label : placeholder}
-          </AppText>
+          </CustomText>
           <MaterialCommunityIcons
             name="chevron-down"
             size={20}
@@ -40,13 +46,13 @@ function AppPicker({ icon, items, onSelectItem, placeholder, selectedItem }) {
         </View>
       </TouchableWithoutFeedback>
       <Modal visible={modalVisible} animationType="slide">
-        <AppScreen>
+        <CustomScreen>
           <Button title="Close" onPress={() => setModalVisible(false)} />
           <FlatList
             data={items}
             keyExtractor={(item) => item.value.toString()}
             renderItem={({ item }) => (
-              <AppPickerItem
+              <CustomPickerItem
                 label={item.label}
                 onPress={() => {
                   setModalVisible(false);
@@ -55,7 +61,7 @@ function AppPicker({ icon, items, onSelectItem, placeholder, selectedItem }) {
               />
             )}
           />
-        </AppScreen>
+        </CustomScreen>
       </Modal>
     </>
   );
@@ -75,4 +81,4 @@ const styles = StyleSheet.create({
   text: { flex: 1 },
 });
 
-export default AppPicker;
+export default CustomPicker;

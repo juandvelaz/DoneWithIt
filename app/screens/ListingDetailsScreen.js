@@ -1,19 +1,19 @@
 import React from 'react';
 import { Image, StyleSheet, View } from 'react-native';
 
+import CustomText from '../components/CustomText';
+import CustomListItem from '../components/CustomListItem';
 import colors from '../config/colors';
-import AppText from '../components/AppText';
-import AppListItem from '../components/AppListItem';
 
 function ListingDetailsScreen(props) {
   return (
     <View>
       <Image style={styles.image} source={require('../assets/jacket.jpg')} />
       <View style={styles.detailsContainer}>
-        <AppText style={styles.title}>Red jacket for sale</AppText>
-        <AppText style={styles.price}>$100</AppText>
+        <CustomText style={styles.title}>Red jacket for sale</CustomText>
+        <CustomText style={styles.price}>$100</CustomText>
         <View style={styles.userContainer}>
-          <AppListItem
+          <CustomListItem
             image={require('../assets/mosh.jpg')}
             title="Mosh Hamedani"
             subTitle="5 listings"

@@ -3,9 +3,9 @@ import { Image, StyleSheet, TouchableHighlight, View } from 'react-native';
 import Swipeable from 'react-native-gesture-handler/Swipeable';
 
 import colors from '../config/colors';
-import AppText from './AppText';
+import CustomText from './CustomText';
 
-function AppListItem({
+function CustomListItem({
   title,
   subTitle,
   image,
@@ -20,8 +20,10 @@ function AppListItem({
           {IconComponent}
           {image && <Image style={styles.image} source={image} />}
           <View style={styles.detailsContainer}>
-            <AppText style={styles.title}>{title}</AppText>
-            {subTitle && <AppText style={styles.subTitle}>{subTitle}</AppText>}
+            <CustomText style={styles.title}>{title}</CustomText>
+            {subTitle && (
+              <CustomText style={styles.subTitle}>{subTitle}</CustomText>
+            )}
           </View>
         </View>
       </TouchableHighlight>
@@ -52,4 +54,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default AppListItem;
+export default CustomListItem;

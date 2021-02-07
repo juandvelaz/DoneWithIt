@@ -1,10 +1,10 @@
 import React from 'react';
 import { StyleSheet, View, FlatList } from 'react-native';
-import AppIcon from '../components/AppIcon';
 
-import AppListItem from '../components/AppListItem';
-import AppListItemSeperator from '../components/AppListItemSeperator';
-import AppScreen from '../components/AppScreen';
+import CustomIcon from '../components/CustomIcon';
+import CustomListItem from '../components/CustomListItem';
+import CustomListItemSeperator from '../components/CustomListItemSeperator';
+import CustomScreen from '../components/CustomScreen';
 import colors from '../config/colors';
 
 const menuItems = [
@@ -26,9 +26,9 @@ const menuItems = [
 
 function AccountScreen(props) {
   return (
-    <AppScreen style={styles.screen}>
+    <CustomScreen style={styles.screen}>
       <View style={styles.container}>
-        <AppListItem
+        <CustomListItem
           title="Mosh Hamedani"
           subTitle="Programmingwithmosh@gmail.com"
           image={require('../assets/mosh.jpg')}
@@ -38,12 +38,12 @@ function AccountScreen(props) {
         <FlatList
           data={menuItems}
           keyExtractor={(menuItem) => menuItem.title}
-          ItemSeparatorComponent={AppListItemSeperator}
+          ItemSeparatorComponent={CustomListItemSeperator}
           renderItem={({ item }) => (
-            <AppListItem
+            <CustomListItem
               title={item.title}
               IconComponent={
-                <AppIcon
+                <CustomIcon
                   name={item.icon.name}
                   backgroundColor={item.icon.backgroundColor}
                 />
@@ -52,11 +52,11 @@ function AccountScreen(props) {
           )}
         />
       </View>
-      <AppListItem
+      <CustomListItem
         title="Log Out"
-        IconComponent={<AppIcon name="logout" backgroundColor="#ffe66d" />}
+        IconComponent={<CustomIcon name="logout" backgroundColor="#ffe66d" />}
       />
-    </AppScreen>
+    </CustomScreen>
   );
 }
 

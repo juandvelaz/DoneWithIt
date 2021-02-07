@@ -2,7 +2,7 @@ import React from 'react';
 import { View } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
-function AppIcon({
+function CustomIcon({
   name,
   size = 50,
   backgroundColor = '#000',
@@ -24,4 +24,4 @@ function AppIcon({
   );
 }
 
-export default AppIcon;
+export default CustomIcon;

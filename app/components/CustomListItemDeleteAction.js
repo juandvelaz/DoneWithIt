@@ -1,10 +1,11 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import colors from '../config/colors';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { TouchableWithoutFeedback } from 'react-native-gesture-handler';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
-function AppListItemDeleteAction({ onPress }) {
+import colors from '../config/colors';
+
+function CustomListItemDeleteAction({ onPress }) {
   return (
     <TouchableWithoutFeedback onPress={onPress}>
       <View style={styles.container}>
@@ -28,4 +29,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default AppListItemDeleteAction;
+export default CustomListItemDeleteAction;

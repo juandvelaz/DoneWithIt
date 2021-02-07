@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { FlatList, StyleSheet, View } from 'react-native';
 
-import AppListItem from '../components/AppListItem';
-import AppListItemDeleteAction from '../components/AppListItemDeleteAction';
-import AppListItemSeperator from '../components/AppListItemSeperator';
-import AppScreen from '../components/AppScreen';
+import CustomListItem from '../components/CustomListItem';
+import CustomListItemDeleteAction from '../components/CustomListItemDeleteAction';
+import CustomListItemSeperator from '../components/CustomListItemSeperator';
+import CustomScreen from '../components/CustomScreen';
 
 const initilaMessages = [
   {
@@ -36,26 +36,28 @@ function MessagesScreen(props) {
   };
 
   return (
-    <AppScreen>
+    <CustomScreen>
       <FlatList
         data={messages}
         keyExtractor={(message) => message.id.toString()}
         renderItem={({ item }) => {
           return (
-            <AppListItem
+            <CustomListItem
               title={item.title}
               subTitle={item.description}
               image={item.image}
               onPress={() => console.log('Message selected', item)}
               renderRightActions={() => {
                 return (
-                  <AppListItemDeleteAction onPress={() => handleDelete(item)} />
+                  <CustomListItemDeleteAction
+                    onPress={() => handleDelete(item)}
+                  />
                 );
               }}
             />
           );
         }}
-        ItemSeparatorComponent={AppListItemSeperator}
+        ItemSeparatorComponent={CustomListItemSeperator}
         refreshing={refreshing}
         onRefresh={() => {
           setMessages([
@@ -68,7 +70,7 @@ function MessagesScreen(props) {
           ]);
         }}
       />
-    </AppScreen>
+    </CustomScreen>
   );
 }
 
