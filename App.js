@@ -16,10 +16,10 @@ import RegisterScreen from './app/screens/RegisterScreen';
 export default function App() {
   // return <WelcomeScreen />;
   // return <LoginScreen />;
-  return <RegisterScreen />;
+  // return <RegisterScreen />;
   // return <ListingsScreen />;
   // return <ListingDetailsScreen />;
-  // return <ListingEditScreen />;
+  return <ListingEditScreen />;
   // return <ViewImageScreen />;
   // return <AccountScreen />;
   // return <MessagesScreen />;
