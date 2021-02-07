@@ -4,7 +4,7 @@ import { useFormikContext } from 'formik';
 import CustomPicker from './CustomPicker';
 import CustomErrorMessage from './CustomErrorMessage';
 
-function CustomFormPicker({ items, name, placeholder }) {
+function CustomFormPicker({ items, name, placeholder, width }) {
   const { errors, setFieldValue, touched, values } = useFormikContext();
 
   return (
@@ -14,6 +14,7 @@ function CustomFormPicker({ items, name, placeholder }) {
         onSelectItem={(item) => setFieldValue(name, item)}
         placeholder={placeholder}
         selectedItem={values[name]}
+        width={width}
       />
       <CustomErrorMessage error={errors[name]} visible={touched[name]} />
     </>

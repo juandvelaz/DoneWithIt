@@ -19,10 +19,10 @@ export default function App() {
   // return <RegisterScreen />;
   // return <ListingsScreen />;
   // return <ListingDetailsScreen />;
-  // return <ListingEditScreen />;
+  return <ListingEditScreen />;
   // return <ViewImageScreen />;
   // return <AccountScreen />;
-  return <MessagesScreen />;
+  // return <MessagesScreen />;
 }
 
 const styles = StyleSheet.create({});
